@@ -1,0 +1,401 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.home-search {
+    z-index: 99;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    margin: 20px auto;
+    margin-left: -300px;
+    width: 600px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.home-search button {
+
+  height: 50px;
+  width: 90px;
+  float: left;
+  font-size: 16px;
+  display: inline;
+  border-color: #333;
+  margin-left: 0 !important;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  -ms-border-radius: 0 25px 25px 0;
+  -o-border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0;
+
+
+
+}
+
+.home-search .searchbox {
+
+      position: relative;
+      float: left;
+      font-size: 16px;
+      height: 50px;
+      text-indent: 18px;
+      border-right: 0;
+      border-color: #444;
+      webkit-border-radius: 25px 0 0 25px;
+      -moz-border-radius: 25px 0 0 25px;
+      -ms-border-radius: 25px 0 0 25px;
+      -o-border-radius: 25px 0 0 25px;
+      border-radius: 25px 0 0 25px;
+
+}
+
+.home-search .searchbox:hover {
+    border-color:#222;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+
+}
+.home-search .searchbox:focus {
+    border-color:#4d90fe;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.home-search .input-group:after {
+    content: "\f002";
+    position: absolute;
+    z-index: 4;
+    color: #666;
+    top: 15px;
+    left: 15px;
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+
+}
+
+.home-search .input-group .form-control:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.home-search .input-group-btn:last-child>.btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.fb-widget {
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 50px;
+}.home-search {
+    z-index: 99;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    margin: 20px auto;
+    margin-left: -300px;
+    width: 600px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.home-search button {
+
+  height: 50px;
+  width: 90px;
+  float: left;
+  font-size: 16px;
+  display: inline;
+  border-color: #333;
+  margin-left: 0 !important;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  -ms-border-radius: 0 25px 25px 0;
+  -o-border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0;
+
+
+
+}
+
+.home-search .searchbox {
+
+      position: relative;
+      float: left;
+      font-size: 16px;
+      height: 50px;
+      text-indent: 18px;
+      border-right: 0;
+      border-color: #444;
+      webkit-border-radius: 25px 0 0 25px;
+      -moz-border-radius: 25px 0 0 25px;
+      -ms-border-radius: 25px 0 0 25px;
+      -o-border-radius: 25px 0 0 25px;
+      border-radius: 25px 0 0 25px;
+
+}
+
+.home-search .searchbox:hover {
+    border-color:#222;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+
+}
+.home-search .searchbox:focus {
+    border-color:#4d90fe;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.home-search .input-group:after {
+    content: "\f002";
+    position: absolute;
+    z-index: 4;
+    color: #666;
+    top: 15px;
+    left: 15px;
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+
+}
+
+.home-search .input-group .form-control:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.home-search .input-group-btn:last-child>.btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.fb-widget {
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 50px;
+}.home-search {
+    z-index: 99;
+    position: absolute;
+    top: 245px;
+    left: 50%;
+    margin: 20px auto;
+    margin-left: -300px;
+    width: 600px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.home-search button {
+
+  height: 50px;
+  width: 90px;
+  float: left;
+  font-size: 16px;
+  display: inline;
+  border-color: #333;
+  margin-left: 0 !important;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  -ms-border-radius: 0 25px 25px 0;
+  -o-border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0;
+
+
+
+}
+
+.home-search .searchbox {
+
+      position: relative;
+      float: left;
+      font-size: 16px;
+      height: 50px;
+      text-indent: 18px;
+      border-right: 0;
+      border-color: #444;
+      webkit-border-radius: 25px 0 0 25px;
+      -moz-border-radius: 25px 0 0 25px;
+      -ms-border-radius: 25px 0 0 25px;
+      -o-border-radius: 25px 0 0 25px;
+      border-radius: 25px 0 0 25px;
+
+}
+
+.home-search .searchbox:hover {
+    border-color:#222;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+
+}
+.home-search .searchbox:focus {
+    border-color:#4d90fe;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.home-search .input-group:after {
+    content: "\f002";
+    position: absolute;
+    z-index: 4;
+    color: #666;
+    top: 15px;
+    left: 15px;
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+
+}
+
+.home-search .input-group .form-control:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.home-search .input-group-btn:last-child>.btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.fb-widget {
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 50px;
+}

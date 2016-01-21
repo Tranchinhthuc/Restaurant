@@ -9,20 +9,141 @@
 <body style="background-color: #EAEAEA">
 
   <%= render "shared/nav" %>
+
+  <div class="home-search">
+      <!-- <div class="input-group"> -->
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon3">Name</span>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Search for a Restaurant Name, Cuisine, City Etc">
+        </div>
+
+
+      <!-- </div> -->
+      <div class="input-group">
+        <%#= form.label :title, class: 'pull-left' %>
+        <span class="input-group-addon" id="basic-addon4">City</span>
+        <%= select("post", "person_id", ["dasd", "dasd"], { include_blank: true, class: 'form-control ct-input-text-field', "aria-describedby": "basic-addon3" }) %>
+        <span class="input-group-addon" id="basic-addon4">Town</span>
+        <%= select("post", "person_id", ["dasd", "dasd"], { include_blank: true, class: 'form-control ct-input-text-field', "aria-describedby": "basic-addon3" }) %>
+        <span class="input-group-addon" id="basic-addon4">Vilage</span>
+        <%= select("post", "person_id", ["dasd", "dasd"], { include_blank: true, class: 'form-control ct-input-text-field', "aria-describedby": "basic-addon3" }) %>
+        <%#= form.text_field :title, { placeholder: 'Enter your document\'s title', class: 'form-control ct-input-text-field' } %>
+      </div>
+      <div class="input-group">
+      <!-- <span class="input-group-btn"> -->
+        <button class="btn btn-primary" id="searchButton" type="button">Search</button>
+        <!-- </span> -->
+      </div>
+      <!-- /input-group -->
+
+    </div>
   <!-- Header Carousel -->
   <%= render "shared/slide" %>
 
   <!-- Page Content -->
   <div class="container">
 
+
       <!-- Marketing Icons Section -->
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-3">
+          <div class="left-sidebar" style="padding-top: 50px">
+
+            <!-- <div class="row left-sb-title"> -->
+              <h4><span><i class="fa fa-th-list" style="color: #e67e22; margin-right: 10px;"></i></span>CATEGORIES</h4>
+            <!-- </div> -->
+            <ul class="list-group no-margin">
+              <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to 'Essays', "#", style: params[:category] == 'essay' ? 'color: #e67e22' :'' %>
+                <span class="label pull-right"><%#= Document.where(category: 'essay').count %></span>
+              </li>
+              <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to 'Dissertations', "#", style: params[:category] == 'dissertation' ? 'color: #e67e22' :'' %>
+                <span class="label pull-right"><%#= Document.where(category: 'dissertation').count %></span>
+              </li>
+            </ul>
+            <%# if user_signed_in? %>
+              <div style="height:30px"></div>
+
+              <h4><span><i class="fa fa-th-list" style="color: #e67e22; margin-right: 10px;"></i></span>FAVORITE</h4>
+
+              <ul class="list-group no-margin">
+                <li class="list-group-item no-border-hr ct-list-item">
+                  <%= link_to 'Your Favorite', "#", style: params[:favorite] == "favorite" ? 'color: #e67e22' :'' %>
+                  <span class="label pull-right"> 4
+                    <%#= Vote.where(user_id: current_user).map(&:document).count %>
+                  </span>
+                </li>
+              </ul>
+            <%# end %>
+
+
+            <div style="height:30px"></div>
+
+            <h4><span><i class="fa fa-th-list" style="color: #e67e22; margin-right: 10px;"></i></span>FAVORITE</h4>
+
+            <ul class="list-group no-margin">
+              <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to "#", style: params[:rating] == 5 ? 'color: #e67e22' :'' do %>
+                  <% 5.times do %>
+                    <img alt="3" src="/assets/star-on.png" title="gorgeous">
+                  <% end %>
+                <% end %>
+                <span class="label pull-right">
+                  <%#= count_doc_rating 5 %>
+                </span>
+              </li>
+
+               <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to "#", style: params[:rating] == 4 ? 'color: #e67e22' :'' do %>
+                  <% 4.times do %>
+                    <img alt="3" src="/assets/star-on.png" title="good">
+                  <% end %>
+                <% end %>
+                <span class="label pull-right">
+                  <%#= count_doc_rating 4 %>
+                </span>
+              </li>
+
+               <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to "#", style: params[:rating] == 3 ? 'color: #e67e22' :'' do %>
+                  <% 3.times do %>
+                    <img alt="3" src="/assets/star-on.png" title="regular">
+                  <% end %>
+                <% end %>
+                <span class="label pull-right">
+                  <%#= count_doc_rating 3 %>
+                </span>
+              </li>
+
+               <li class="list-group-item no-border-hr ct-list-item">
+                <%= link_to "#", style: params[:rating] == 2 ? 'color: #e67e22' :'' do %>
+                  <% 2.times do %>
+                    <img alt="3" src="/assets/star-on.png" title="poor">
+                  <% end %>
+                <% end %>
+                <span class="label pull-right">
+                  <%#= count_doc_rating 2 %>
+                </span>
+              </li>
+
+               <li class="list-group-item no-border-hr ct-list-item">
+                <%#= link_to documents_path(rating: 1), style: params[:rating] == 1 ? 'color: #e67e22' :'' do %>
+                  <img alt="3" src="/assets/star-on.png" title="bad">
+                <%# end %>
+                <span class="label pull-right">
+                  <%#= count_doc_rating 1 %>
+                </span>
+              </li>
+            </ul>
+        </div>
+      </div>
+        <div class="col-md-9">
           <h1 class="page-header">
             Latest Reviews
           </h1>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4><i class="fa fa-fw fa-check"></i> Restaurant 1</h4>
@@ -117,7 +238,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
@@ -130,7 +251,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>

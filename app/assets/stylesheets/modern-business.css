@@ -185,8 +185,88 @@ footer {
 
 }
 
+.input-group {
+  margin-top: 10px;
+}
+/*
 .home-search .input-group:after {
     content: "\f002";
+    position: absolute;
+    z-index: 4;
+    color: #666;
+    top: 15px;
+    left: 15px;
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+
+}
+*/
+.home-search .input-group .form-control:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.home-search .input-group-btn:last-child>.btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.home-search button {
+
+  height: 50px;
+  width: 90px;
+  float: left;
+  font-size: 16px;
+  display: inline;
+  border-color: #333;
+  margin-left: 0 !important;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  -ms-border-radius: 0 25px 25px 0;
+  -o-border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0;
+
+
+
+}
+
+.home-search .searchbox {
+
+      position: relative;
+      float: left;
+      font-size: 16px;
+      height: 50px;
+      text-indent: 18px;
+      border-right: 0;
+      border-color: #444;
+      webkit-border-radius: 25px 0 0 25px;
+      -moz-border-radius: 25px 0 0 25px;
+      -ms-border-radius: 25px 0 0 25px;
+      -o-border-radius: 25px 0 0 25px;
+      border-radius: 25px 0 0 25px;
+
+}
+
+.home-search .searchbox:hover {
+    border-color:#222;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+
+}
+.home-search .searchbox:focus {
+    border-color:#4d90fe;
+    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.home-search .input-group:after {
+    /*content: "\f002";*/
     position: absolute;
     z-index: 4;
     color: #666;
@@ -217,7 +297,7 @@ footer {
 }.home-search {
     z-index: 99;
     position: absolute;
-    top: 245px;
+    top: 120px;
     left: 50%;
     margin: 20px auto;
     margin-left: -300px;
@@ -278,99 +358,7 @@ footer {
 }
 
 .home-search .input-group:after {
-    content: "\f002";
-    position: absolute;
-    z-index: 4;
-    color: #666;
-    top: 15px;
-    left: 15px;
-    font-family: FontAwesome;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-
-}
-
-.home-search .input-group .form-control:first-child {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
-.home-search .input-group-btn:last-child>.btn {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.fb-widget {
-  overflow: hidden;
-  padding: 5px;
-  margin-top: 50px;
-}.home-search {
-    z-index: 99;
-    position: absolute;
-    top: 245px;
-    left: 50%;
-    margin: 20px auto;
-    margin-left: -300px;
-    width: 600px;
-    padding: 8px;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.home-search button {
-
-  height: 50px;
-  width: 90px;
-  float: left;
-  font-size: 16px;
-  display: inline;
-  border-color: #333;
-  margin-left: 0 !important;
-  -webkit-border-radius: 0 25px 25px 0;
-  -moz-border-radius: 0 25px 25px 0;
-  -ms-border-radius: 0 25px 25px 0;
-  -o-border-radius: 0 25px 25px 0;
-  border-radius: 0 25px 25px 0;
-
-
-
-}
-
-.home-search .searchbox {
-
-      position: relative;
-      float: left;
-      font-size: 16px;
-      height: 50px;
-      text-indent: 18px;
-      border-right: 0;
-      border-color: #444;
-      webkit-border-radius: 25px 0 0 25px;
-      -moz-border-radius: 25px 0 0 25px;
-      -ms-border-radius: 25px 0 0 25px;
-      -o-border-radius: 25px 0 0 25px;
-      border-radius: 25px 0 0 25px;
-
-}
-
-.home-search .searchbox:hover {
-    border-color:#222;
-    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
-
-}
-.home-search .searchbox:focus {
-    border-color:#4d90fe;
-    -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
-
-}
-
-.home-search .input-group:after {
-    content: "\f002";
+    /*content: "\f002";*/
     position: absolute;
     z-index: 4;
     color: #666;
